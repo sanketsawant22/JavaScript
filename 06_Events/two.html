@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Sync JS</title>
+</head>
+<body>
+    
+     <h1>Hello World...!</h1>
+     <div class="input"></div>
+     <button id="btn">Stop</button>
+
+</body>
+
+<script>
+
+        // default java script is synchronous and is single threaded language 
+        // i.e code will execute line by line one task at once
+
+        // 
+
+
+
+
+
+    const div = document.querySelector(".input")
+    const h1 = document.querySelector("h1")
+
+    // setTimeout(function() {
+    //     div.innerHTML = "1"
+    // }, 1000)
+
+    // setTimeout(function() {
+    //     div.innerHTML = "2"
+    // }, 2000)
+
+    // setTimeout(function() {
+    //     div.innerHTML = "3"
+    // }, 3000)
+
+    const sayMyName = function() {
+        h1.innerHTML = "Sanket Sawant"
+    }
+
+    const timeout1 = setTimeout(sayMyName, 2000);
+
+    const btn = document.querySelector("#btn")
+
+    btn.addEventListener("click", function(e) {
+        clearTimeout(timeout1)
+        console.log("Stopped...!");
+        
+    } )
+
+</script>
+</html>

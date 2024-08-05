@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Current Time :</h1>
+
+    <div class="time">00:00:00</div>
+
+    <button id="startbtn">Start</button>
+    <button id="stopbtn">Stop</button>
+    <button class="resetbtn">Reset</button>
+  </body>
+
+  <script>
+    const startbtn = document.querySelector("#startbtn");
+    const stopbtn = document.querySelector("#stopbtn");
+    const resetbtn = document.querySelector(".resetbtn");
+
+    let timeInterval;
+
+    startbtn.addEventListener("click", function () {
+      timeInterval = setInterval(function () {
+        let currentTime = new Date().toLocaleTimeString();
+        document.querySelector(".time").innerHTML = currentTime;
+      }, 1000);
+    });
+
+    stopbtn.addEventListener("click", function () {
+      clearInterval(timeInterval);
+    });
+
+    resetbtn.addEventListener("click", function (e) {
+      clearInterval(timeInterval);
+      document.querySelector(".time").innerHTML = "00:00:00";
+    });
+  </script>
+</html>
