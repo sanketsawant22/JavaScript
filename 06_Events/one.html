@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML events</title>
+  </head>
+  <body>
+    <ul
+      class="images"
+      style="
+        margin-top: 30vh;
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+      "
+    >
+      <li><img src="1.jpeg" id="shinchan" height="200px" alt="shinchan" /></li>
+      <li><img src="2.jpeg" id="oggy" height="200px" alt="oggy" /></li>
+      <li><img src="3.jpeg" id="optimus" height="200px" alt="optimus" /></li>
+      <li>
+        <img src="4.jpeg" id="spongeBob" height="200px" alt="spongeBob" />
+      </li>
+      <li><a href="https://www.google.co.in/">Google</a></li>
+    </ul>
+  </body>
+
+  <script>
+    // document.getElementById("shinchan").onclick = function() {
+    //     alert("shinchan")
+    // }
+
+    // document.getElementById("shinchan").addEventListener("click", function() {
+    //     alert("Shinchan")
+    // },false)
+
+    // this 3rd parameter "false" is to set the event to false at start,
+    // but by default event is false thus it is not mandatory to use false.
+
+    // this third parameter is called as "event propogation"
+    // false - event bubbling (low to high)
+    // true - event capturing (high to low)
+
+    // e.stopPropogation()       stop next higher or lower events
+    // e.preventDefault()        prevent elements default operations
+
+    /*
+
+    document.querySelector(".images").addEventListener("click", function() {
+        console.log("list")
+    }, true)
+
+    document.getElementById("shinchan").addEventListener("click", function() {
+        console.log("shinchan")
+    }, true) 
+
+*/
+
+    document.querySelector(".images").addEventListener("click", function (e) {
+      if (e.target.tagName === "IMG") {
+        e.target.parentNode.remove();
+      }
+    });
+
+  </script>
+</html>
