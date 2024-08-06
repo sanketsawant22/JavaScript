@@ -20,21 +20,21 @@
     const stopbtn = document.querySelector("#stopbtn");
     const resetbtn = document.querySelector(".resetbtn");
 
-    let timeInterval;
+    let time;
 
-    startbtn.addEventListener("click", function () {
-      timeInterval = setInterval(function () {
+    startbtn.addEventListener("click", function (e) {
+      time = setInterval(function () {
         let currentTime = new Date().toLocaleTimeString();
         document.querySelector(".time").innerHTML = currentTime;
       }, 1000);
     });
 
-    stopbtn.addEventListener("click", function () {
-      clearInterval(timeInterval);
+    stopbtn.addEventListener("click", function (e) {
+      clearInterval(time);
     });
 
     resetbtn.addEventListener("click", function (e) {
-      clearInterval(timeInterval);
+      clearInterval(time);
       document.querySelector(".time").innerHTML = "00:00:00";
     });
   </script>
