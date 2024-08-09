@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        * {
+            background-color: white;
+            color: #212121;
+        }
+
+        .card {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #676060;
+            color: white;
+            width: 200px;
+            padding: 5px;
+            border-radius: 7px;
+        }
+
+        .card span {
+            background-color: #676060;
+            color: white;
+            padding: 5px;
+        }
+
+        .card img {
+            height: 200px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <title>GitHub Profile</title>
+    
+</head>
+<body>
+    <div class="card">
+        <img class="photo" src="1.jpeg" alt="image">
+        <span class="name">Loading...</span>
+        <span class="followers">Loading...</span>
+    </div>
+
+    <script>
+        const reqUrl = 'https://api.github.com/users/hiteshchoudhary';
+        const xhr = new XMLHttpRequest();
+
+        xhr.open('GET', reqUrl);
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(xhr.responseText);
+                const photoUrl = data.avatar_url;
+                const name = data.name;
+                const followers = data.followers;
+
+                console.log(name, followers);                
+
+                // document.querySelector(".photo").src = photoUrl;
+                // document.querySelector(".name").textContent = name;
+                // document.querySelector(".followers").textContent = followers;
+            }
+        }
+
+        xhr.send();
+    </script>
+</body>
+</html>
