@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(222, 222, 222);
+    /* background-color: #212121; */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container header {
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container form {
+    margin: 40px 0 20px 0;
+    width: 100%;
+}
+
+form :where(input, select, button) {
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+}
+
+form p {
+    font-size: 18px;
+}
+
+form input {
+    border: 1px solid rgb(64, 64, 64);
+    padding: 0 15px;
+    height: 50px;
+    font-size: 17px;
+}
+
+form input:focus {
+    border: 2px solid rgb(64, 64, 64);
+    padding: 0 14px;
+}
+
+form .list {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list .select {
+    height: 45px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+    justify-content: space-between;
+}
+
+.list p {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.list .icon i {
+    /* background-color: red; */
+    transform: translateY(15px);
+    font-weight: 200;
+    font-size: 25px;
+}
+
+.list .select img {
+    height: 30px;
+    width: 50px;
+}
+
+.list .select select {
+    height: 30px;
+    width: 50px;
+}
+
+.list .select select::-webkit-scrollbar {
+    /* background-color: red; */
+    width: 15px;
+    color: black;
+}
+
+.list .select select::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+.list .select select::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 50px;
+}
+
+
+
+.output {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.btn {
+    margin-top: 10px;
+    height: 50px;
+    background-color: rgb(138, 133, 232);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 500;
+}
