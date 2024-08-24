@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind</title>
+</head>
+<body>
+    <button class="btn" >Button</button>
+</body>
+
+<script>
+
+    // const btn = document.querySelector("button");
+
+    // btn.addEventListener("click", () => {
+    //     console.log("asdfghj"); 
+    // })
+
+    class react {
+       constructor() {
+        this.library = "library";
+        this.server = "server@2210";
+
+        // special request
+
+        document.querySelector("button").addEventListener("click", this.buttomClicked.bind(this))
+        // bind id used to bind this with newly created functions
+       }
+
+        buttomClicked() {
+        console.log("btn clicked");
+        console.log(this.server);
+       }
+    }
+
+    const obj = new react();
+
+</script>
+
+</html>
