@@ -62,6 +62,16 @@ form input:focus {
     padding: 0 14px;
 }
 
+.select {
+    border: 1px solid black;
+    padding-left: 4px;
+    border-radius: 5px;
+}
+
+.select img {
+    border-radius: 5px;
+}
+
 form .list {
     padding: 10px 10px;
     display: flex;
