@@ -8,7 +8,7 @@ function user (email, password) {
         },
 
         set: function(value) {
-            this.email = value;
+            this._email = value;
         }
     })
 
@@ -18,11 +18,11 @@ function user (email, password) {
         },
 
         set: function(value) {
-            this.password = value;
+            this._password = value;
         }
     })
 }
 
 const sanket = new user("sanket", "sawant")
 
-console.log(sanket.password);
+console.log(sanket.email);

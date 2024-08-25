@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clousor</title>
+</head>
+
+<body>
+
+    <button class="orange">Orange</button>
+    <button class="green">Green</button>
+    <button class="red">Red</button>
+
+</body>
+
+<script>
+
+    // LEXICAL SCOPPING -->
+
+    function init() {
+        let name = "sanket"
+
+        function displayName() {
+            console.log(name);
+        }
+        displayName();
+    }
+    init();
+
+    // CLOUSOR -->
+
+    function outer() {
+        let name = "ujwal"
+
+        function inner() {
+            console.log(name);
+        }
+        return inner;
+    }
+
+    const func = outer();
+
+    func();
+
+</script>
+
+<script>
+
+    // function setColor(color) {
+    //     return function() {
+    //         document.body.style.backgroundColor = color
+    //     }
+    // }
+
+    // document.querySelector(".orange").addEventListener("click", setColor("orange"))
+
+    // document.querySelector(".green").addEventListener("click", setColor("green"))
+
+    // ANOTHER METHOD
+    function setColor(color) {
+        return function () {
+            document.body.style.backgroundColor = color;
+        }
+    }
+
+    let buttons = document.querySelectorAll("button");
+
+    buttons.forEach(function (btn) {
+        btn.addEventListener("click", setColor(btn.getAttribute("class")));
+    });
+
+</script>
+
+</html>
