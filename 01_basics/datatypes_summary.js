@@ -28,11 +28,14 @@ let name1 = "sanket"
 let name2 = "ujwal"
 
 
-name2 = "pranav"
+name3 = name2
+console.log(name2);
+console.log(name3);
+
 
 // in primitive copy of variables is given
 
-// if i change the primmitve variables value then  changes will be applied to coppy of the variable
+// if i change the primmitve variables value then changes will be applied to coppy of the variable
 
 let user1 = {
     email: "user1@google.com",
