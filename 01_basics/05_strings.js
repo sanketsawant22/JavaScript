@@ -18,5 +18,6 @@ console.log(gameName);
 console.log(name);
 // both works same
 
+
 console.log(gameName[1]);
 console.log(gameName.length);
