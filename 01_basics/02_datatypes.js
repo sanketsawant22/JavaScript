@@ -1,6 +1,7 @@
 let name = "sanket"
 let age = 19
 
+
 console.log(typeof age) 
 
 // it will return the datatype of variable

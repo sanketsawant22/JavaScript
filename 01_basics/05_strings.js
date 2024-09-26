@@ -1,7 +1,7 @@
 let name = "sanket"
 let age = 19
 
-console.log(name + age);
+console.log(name + " " + age);
 
 console.log(`hello my name is ${name} and my age is ${age}.`);
 
@@ -9,6 +9,11 @@ console.log(`hello my name is ${name} and my age is ${age}.`);
 
 let gameName = new String("DylingLight")
 
+// --> new String = object
+// --> String = String
+
+
+console.log( typeof gameName)   // object because use of new keyword
 console.log(gameName);
 console.log(name);
 // both works same

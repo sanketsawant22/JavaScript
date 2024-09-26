@@ -16,7 +16,7 @@ console.log(null >= 0);
 // -> (while comparing null is convertede to number that is 0)
 // -> true as null (0) >= 0
 
-// -> == check that are the values same by converting them
+// -> == check that are the values same by not converting them
 // -> === check datatype is same or not along with value
 
 console.log("2" == 2);
