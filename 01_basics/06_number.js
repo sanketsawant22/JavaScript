@@ -1,16 +1,16 @@
 let number = 100
 console.log(number);
 
-let score = new Number(200)
+let score = new Number(2000)
 console.log(score);
 console.log(score.toFixed(2));
 console.log(score.toString());
-console.log(score.toPrecision(5));
+console.log(score.toPrecision(8));
 
 let distance = 1000000
 console.log(distance.toLocaleString('en-IN'));
 
-// ---------------------------------------- MATHS ----------------------------------------
+// ---------------------------------------- MATH ----------------------------------------
 
 console.log(Math.abs(-5));
 
