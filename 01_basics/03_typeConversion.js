@@ -66,4 +66,5 @@ console.log("1" + 2 + 2);
 console.log(1 + 2 + "2");
 // -> 32
 
+
 // To avoid such error in code operation are must to be performed using '()'
