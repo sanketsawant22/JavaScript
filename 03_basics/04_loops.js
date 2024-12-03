@@ -1,5 +1,5 @@
 
-// for of loop              this loop reteurns objects not keys
+// for of loop              this loop returns objects not keys
 
 const arr = [5,4,3,2,1,0]
 
@@ -39,7 +39,7 @@ for (const key in obj1) {
 
 
 for (const key in arr) {
-    console.log(arr[key]);
+    console.log(key + " :- " + arr[key]);
 }
 
 

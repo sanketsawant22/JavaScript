@@ -16,7 +16,7 @@ const obj3 = Object.assign({}, obj1, obj2)
 const obj4 = {...obj1, ...obj2}   // works same 
 
 // if Object.assign(obj1, obj2) then obj2 will combine with obj1 inside
-// obj1 thus we provide empty abject at first {}
+// obj1 thus we provide empty object at first {}
 
 console.log(obj3);
 console.log(obj4);

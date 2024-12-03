@@ -12,11 +12,11 @@ function quoteGenerator() {
             return response.json();
         })
         .then((data) => {
-            // console.log(data[0].q);
+            console.log(data[0].q);
             quote.textContent = data[0].q
         })
         .catch((error) => {
-            console.error('Error : ', error);
+            console.error('Error : '+ error);
         });
 }
 

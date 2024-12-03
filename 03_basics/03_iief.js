@@ -7,7 +7,7 @@
 (function heros() {
     // named iife as it has name
     console.log("MARVEL");
-})();                              // to end iife ; is must else it rest of iife will get errors
+})();                              // to end iife ; is must end else rest of iife will get errors
 
 
 ((name) => {
